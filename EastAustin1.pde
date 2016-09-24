@@ -4,7 +4,6 @@ Module[] mods;
 
 void setup() {
   fullScreen();
-  //size(1300, 800);
   stroke(35);
   int wideCount = width / unit;
   int highCount = height / unit;
@@ -20,7 +19,7 @@ void setup() {
 }
 
 void draw() {
-  background(85);
+  background(175); //85
   for (Module mod : mods) {
     mod.update();
     mod.display();
@@ -51,10 +50,10 @@ class Module {
   void update() {
     x = x + (speed * xDirection);
     if (x >= unit || x <= 0) {
-      xDirection *= -1;
+      xDirection *= -5;
       x = x + (1 * xDirection);
       y = y + (1 * yDirection);
-    }
+    } 
     if (y >= unit || y <= 0) {
       yDirection *= -1;
       y = y + (1 * yDirection);
@@ -63,11 +62,17 @@ class Module {
   
   // Custom method for drawing the object
   void display() {
+    
     if (frameCount % 2 == 0) {
-      fill(frameCount * .3 % 255, frameCount * .5 % 255, frameCount * 6 % 255);
-    } 
+      //strokeWeight(random(0,3));
+      fill(frameCount * .3 % 255, frameCount * .5 % 255, frameCount * 6 % 255, random(55, 75));
+      stroke(0, 175, random(0, 255));
+      
+    }
+    
     stroke(0, 175, random(0, 255));
-    rect(xOffset + x -50, yOffset + y -50, 100, 100);
+    //rect(yOffset + y + 200, xOffset + x -50,100, 100);
+    rect(xOffset + x -50, yOffset + y -50, 150, 150);
     //rect(xOffset + x, yOffset + y , random(90, 100), 100); 
 
   }
