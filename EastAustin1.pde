@@ -3,7 +3,8 @@ int count;
 Module[] mods;
 
 void setup() {
-  size(640, 360);
+  fullScreen();
+  //size(1300, 800);
   stroke(35);
   int wideCount = width / unit;
   int highCount = height / unit;
@@ -62,10 +63,12 @@ class Module {
   
   // Custom method for drawing the object
   void display() {
-    if (frameCount % 5 == 0) {
-      fill(25, 55, frameCount * 6 % 255);
+    if (frameCount % 2 == 0) {
+      fill(frameCount * .3 % 255, frameCount * .5 % 255, frameCount * 6 % 255);
     } 
     stroke(0, 175, random(0, 255));
-    line(xOffset + x, yOffset + y, random(0,50), 6);
+    rect(xOffset + x -50, yOffset + y -50, 100, 100);
+    //rect(xOffset + x, yOffset + y , random(90, 100), 100); 
+
   }
 }
