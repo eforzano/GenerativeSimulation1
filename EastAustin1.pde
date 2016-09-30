@@ -6,7 +6,7 @@ float period = 500.0;  // How many pixels before the wave repeats
 float dx;  // Value for incrementing X, a function of period and xspacing
 float[] yvalues;  // Using an array to store height values for the wave
 //int unit = 200; 
-int unit = 40;
+int unit = 50;
 int count;
 Module[] mods;
 
@@ -58,6 +58,7 @@ class Module {
   
   // Custom method for updating the variables
   void update() {
+
     x = x + (speed * xDirection);
     y = x + (speed * xDirection);
     if (x >= unit || x <= 0) {
@@ -86,7 +87,7 @@ class Module {
     
     
     /*
-    dancing lines
+    //dancing lines
     theta += 0.02;
     // For every x value, calculate a y value with sine function
 
@@ -96,7 +97,7 @@ class Module {
       x= x+dx;
     }
     for (int x = 0; x < yvalues.length; x++) {
-      rect(x*xspacing * random(1,10), random(1, 1) * height/2+yvalues[x]-300, xOffset /100, xOffset + x -50);
+      rect(x*xspacing * random(1,10), random(0.1, .3) * height/2+yvalues[x]-50, xOffset /100, xOffset + x -50);
      
     }
     */
