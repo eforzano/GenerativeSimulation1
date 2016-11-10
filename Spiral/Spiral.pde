@@ -1,19 +1,29 @@
+import processing.io.*;
 import hype.*;
 import hype.extended.behavior.HOscillator;
 import hype.extended.layout.HGridLayout;
 
 HDrawablePool pool;
-int           boxSixe = 200;
+int boxSixe = 200;
+float rValue = 0;
+float gValue = 175; 
+float bValue = 255;
+float r = 0;
 
 void setup() {
   fullScreen(P3D);
 	//size(640,640,P3D);
-	H.init(this).background(#242424).use3D(true);
+  GPIO.pinMode(2, GPIO.INPUT);
+  GPIO.pinMode(3, GPIO.INPUT);
+  GPIO.pinMode(4, GPIO.INPUT);
+  GPIO.pinMode(27, GPIO.INPUT);
+	H.init(this).background(#242424).use3D(true); 
 
 	pool = new HDrawablePool(100);
 	pool.autoAddToStage()
 		.add(new HBox())
-		.layout(new HGridLayout().startX(600).startY(-180).spacing(50,50).cols(1))
+    
+		.layout(new HGridLayout().startX(650).startY(-180).spacing(50,50).cols(1))
 		.onCreate(
 			 new HCallback() {
 				public void run(Object obj) {
@@ -53,19 +63,27 @@ void setup() {
 		)
 		.requestAll()
 	;
+
 }
 
 void draw() {
-  //
-  if ((mouseX == 0) && (mouseY ==0))  {
-    pointLight(0, 175, 255, width, height/2, -300); // teal
+
+  //pointLight(0, 175, 255, width, height/2, -300); // teal
+  if (GPIO.digitalRead(3) != GPIO.HIGH)  {
+      rValue = random(0, 200);
+      gValue = random(0, 200);
+      bValue = random(0, 200);
     
-  } else {
-    pointLight(mouseY % 43, mouseX % 255, mouseY % 255, width, height/2, -300); // teal
   }
-	//ambientLight(255, 42, 42, -1000, height/2, -900); // orange
-	
-	//fill(255, 204, 75); //,width/2, height/2, -900); // yellow
+  if (GPIO.digitalRead(4) != GPIO.HIGH)  {
+     
+      r+=0.8;
+  }
+  pointLight(rValue, gValue, bValue, width, height/2, -300); // teal
+	translate(width/2, height/8);
+  rotateY(radians(r));
+  translate(-width/32,-height/8);
+  
 
 	H.drawStage();
 }
