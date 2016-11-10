@@ -9,6 +9,7 @@ float rValue = 0;
 float gValue = 175; 
 float bValue = 255;
 float r = 0;
+boolean rFlag = false;
 
 void setup() {
   fullScreen(P3D);
@@ -23,7 +24,7 @@ void setup() {
 	pool.autoAddToStage()
 		.add(new HBox())
     
-		.layout(new HGridLayout().startX(650).startY(-180).spacing(50,50).cols(1))
+		.layout(new HGridLayout().startX(450).startY(-180).spacing(50,50).cols(1))
 		.onCreate(
 			 new HCallback() {
 				public void run(Object obj) {
@@ -69,20 +70,29 @@ void setup() {
 void draw() {
 
   //pointLight(0, 175, 255, width, height/2, -300); // teal
-  if (GPIO.digitalRead(3) != GPIO.HIGH)  {
+  if (GPIO.digitalRead(4) != GPIO.HIGH)  {
       rValue = random(0, 200);
       gValue = random(0, 200);
       bValue = random(0, 200);
     
   }
-  if (GPIO.digitalRead(4) != GPIO.HIGH)  {
-     
-      r+=0.8;
+  if (GPIO.digitalRead(3) != GPIO.HIGH)  {
+    if (r > 80){
+      rFlag = true;
+    } else if (r < -50){
+      rFlag = false;
+    }
+    if (rFlag == true){
+      r-=0.6;
+    } else if (rFlag == false){
+      r+=0.6;
+    } 
+
   }
   pointLight(rValue, gValue, bValue, width, height/2, -300); // teal
-	translate(width/2, height/8);
+	translate(width/4, height);
   rotateY(radians(r));
-  translate(-width/32,-height/8);
+  translate(-width/32,-height);
   
 
 	H.drawStage();
