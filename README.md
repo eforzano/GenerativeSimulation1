@@ -1,11 +1,11 @@
 This is an exploration into Generative Art with Processing. 
 
 In SpiralNonRaspberry Directory:
-There is the code SpiralNonRaspberry.pde that is run with Processing. 
+There is the code SpiralNonRaspberry.pde that is run with Processing and HYPE Framework. 
 
-Or
+or
 
-Windows, Mac or Linux Versions of the application. 
+There are is a Windows, Mac, and Linux Versions of the application. 
 
 Controls:
 Press the Up arrow to change the color. 
