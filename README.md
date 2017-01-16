@@ -1,8 +1,7 @@
 This is an exploration into Generative Art with Processing. 
 
 There are three different projects. 
-![Alt text](/Users/ernestforzano/GitHub/EastAustin1/Pictures/Spiral1.png 
-?raw=true)
+![Alt text](/Pictures/Spiral1.png?raw=true)
 
 
 Spiral is an interactive project that was made to run on a Raspberry Pi, a projector, and arcade buttons. The two arcade buttons allowed user interactivity. 
