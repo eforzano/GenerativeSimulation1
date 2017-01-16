@@ -1,11 +1,5 @@
 This is an exploration into Generative Art with Processing. 
-There are three different projects: 
-
-
-Moving Squares                   | Spiral                    | Trippy Boxes     
-:-------------------------------:|:-------------------------:|:-------------------------:
-![](/Pictures/MovingSquares.png?)|![](/Pictures/Spiral1.png?)|![](/Pictures/TrippyBoxes.png?)
-
+There are three different projects.
 
 
 Spiral is an interactive project that was made to run on a Raspberry Pi, a projector, and arcade buttons. The two arcade buttons allowed user interactivity. 
@@ -22,3 +16,6 @@ Controls:
 Press the Up arrow to change the color. 
 Press the Down arrow to change position of the simulation.
 
+Moving Squares                   | Spiral                    | Trippy Boxes     
+:-------------------------------:|:-------------------------:|:-------------------------:
+![](/Pictures/MovingSquares.png?)|![](/Pictures/Spiral1.png?)|![](/Pictures/TrippyBoxes.png?)
