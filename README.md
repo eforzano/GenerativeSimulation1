@@ -1,3 +1,8 @@
+Moving Squares                   | Spiral                    | Trippy Boxes     
+:-------------------------------:|:-------------------------:|:-------------------------:
+![](/Pictures/MovingSquares.png?)|![](/Pictures/Spiral1.png?)|![](/Pictures/TrippyBoxes.png?)
+
+
 This is an exploration into Generative Art with Processing. 
 There are three different projects.
 
@@ -16,6 +21,3 @@ Controls:
 Press the Up arrow to change the color. 
 Press the Down arrow to change position of the simulation.
 
-Moving Squares                   | Spiral                    | Trippy Boxes     
-:-------------------------------:|:-------------------------:|:-------------------------:
-![](/Pictures/MovingSquares.png?)|![](/Pictures/Spiral1.png?)|![](/Pictures/TrippyBoxes.png?)
