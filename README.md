@@ -11,13 +11,13 @@ Spiral is an interactive project that was made to run on a Raspberry Pi, a proje
 SpiralNonRaspberry was made to allow users to be able to run without the GPIO pins. 
 
 
-Markup : # Accessing Spiral Project #
-Markup : * In SpiralNonRaspberry Directory: There is the code SpiralNonRaspberry.pde that is run with Processing and HYPE Framework. 
-         * Alternatively: There are is a Windows, Mac, and Linux Versions of the application. 
+# Accessing Spiral Project #
+* In SpiralNonRaspberry Directory: There is the code SpiralNonRaspberry.pde that is run with Processing and HYPE Framework. 
+* Alternatively: There are is a Windows, Mac, and Linux Versions of the application. 
 
-Markup : # Controls #
+# Controls #
 Press the Up arrow to change the color. 
 Press the Down arrow to change position of the simulation.
 
 
-
+For any questions or sugguestion. Email me at: eforzano@gmail.com
